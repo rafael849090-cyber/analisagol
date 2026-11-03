@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnalisaGol - Análise Matemática de Apostas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.jpg">
+</head>
+<body>
+    <div class="disclaimer">
+        ⚠️ <strong>SITE DE ANÁLISE EDUCACIONAL</strong> — Não aceita apostas. Apenas análises e estatísticas. 18+ Jogue com responsabilidade. Decisões são suas.
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="AnalisaGol Logo" class="logo">
+            <span class="logo-text">AnalisaGol</span>
+        </div>
+        <nav>
+            <a href="#" class="nav-link active" data-section="analises">Análises</a>
+            <a href="#" class="nav-link" data-section="estatisticas">Estatísticas</a>
+            <a href="#" class="nav-link" data-section="calculadora">Calculadora</a>
+            <a href="#" class="nav-link" data-section="planos">Planos</a>
+        </nav>
+        <div class="user-info">
+            <span class="badge-pro">PRO</span>
+            <button class="btn-login">Entrar</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- SEÇÃO ANÁLISES -->
+        <div id="section-analises" class="section active">
+            <section class="hero">
+                <h1>Análise Matemática de Apostas</h1>
+                <p>Probabilidade real vs. odds do mercado. Identifique value bets com dados, não com achismo.</p>
+                <div class="stats-bar">
+                    <div class="stat"><strong id="value-count">8</strong> Value Bets hoje</div>
+                    <div class="stat"><strong>16</strong> ligas cobertas</div>
+                    <div class="stat"><strong>+18.7</strong> units (30 dias)</div>
+                </div>
+            </section>
+
+            <section class="filters">
+                <button class="filter active" data-filter="todos">Todos</button>
+                <button class="filter" data-filter="brasileirao">Brasileirão</button>
+                <button class="filter" data-filter="libertadores">Libertadores</button>
+                <button class="filter" data-filter="champions">Champions</button>
+                <button class="filter" data-filter="premier">Premier</button>
+                <button class="filter" data-filter="laliga">La Liga</button>
+                <button class="filter" data-filter="seriea">Serie A</button>
+                <button class="filter" data-filter="bundesliga">Bundesliga</button>
+                <button class="filter" data-filter="ligue1">Ligue 1</button>
+                <button class="filter" data-filter="eredivisie">Eredivisie</button>
+                <button class="filter" data-filter="liga-pt">Liga Portugal</button>
+                <button class="filter" data-filter="mls">MLS</button>
+                <button class="filter" data-filter="copa">Copa do Brasil</button>
+                <button class="filter" data-filter="value">Value Bets</button>
+            </section>
+
+            <section class="matches" id="matches-list"></section>
+        </div>
+
+        <!-- SEÇÃO ESTATÍSTICAS -->
+        <div id="section-estatisticas" class="section">
+            <section class="hero">
+                <h1>Estatísticas Detalhadas</h1>
+                <p>Performance do modelo, médias por liga e histórico de acertos.</p>
+            </section>
+            <div class="stats-grid" id="stats-content"></div>
+        </div>
+
+        <!-- SEÇÃO CALCULADORA -->
+        <div id="section-calculadora" class="section">
+            <section class="hero">
+                <h1>Calculadora de Edge / Value</h1>
+                <p>Calcule a vantagem (edge) de uma aposta comparando sua probabilidade com a odd do mercado.</p>
+            </section>
+            <div class="calculator">
+                <div class="calc-form">
+                    <label>Sua probabilidade estimada (%)</label>
+                    <input type="number" id="myProb" placeholder="Ex: 55" min="1" max="99" step="0.1">
+
+                    <label>Odd do mercado</label>
+                    <input type="number" id="marketOdd" placeholder="Ex: 2.00" min="1.01" step="0.01">
+
+                    <label>Valor da aposta (R$)</label>
+                    <input type="number" id="stake" placeholder="Ex: 100" min="1" step="1" value="100">
+
+                    <button id="calc-btn" class="btn-calc">Calcular Edge</button>
+                </div>
+                <div class="calc-result" id="calc-result">
+                    <p>Preencha os campos para ver o resultado.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEÇÃO PLANOS -->
+        <div id="section-planos" class="section">
+            <section class="hero">
+                <h1>Planos</h1>
+                <p>Acesso completo às análises e ferramentas.</p>
+            </section>
+            <div class="plans">
+                <div class="plan">
+                    <h3>Grátis</h3>
+                    <p class="price">R$ 0</p>
+                    <ul>
+                        <li>Análises básicas</li>
+                        <li>3 ligas</li>
+                        <li>Calculadora limitada</li>
+                    </ul>
+                    <button class="btn-plan">Atual</button>
+                </div>
+                <div class="plan featured">
+                    <h3>PRO</h3>
+                    <p class="price">R$ 49<span>/mês</span></p>
+                    <ul>
+                        <li>Todas as ligas</li>
+                        <li>Value Bets em tempo real</li>
+                        <li>Estatísticas avançadas</li>
+                        <li>Calculadora completa</li>
+                        <li>Alertas</li>
+                    </ul>
+                    <button class="btn-plan primary">Assinar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>AnalisaGol © 2026 — Análise estatística para fins educacionais. Não somos casa de apostas.</p>
+        <p>Jogue com responsabilidade. 18+.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
