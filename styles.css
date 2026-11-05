@@ -1,0 +1,82 @@
+/* AnalisaGol - Estilo inspirado em SportScore + análise */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0f1419; color: #e7e9ea; min-height: 100vh; }
+
+.disclaimer { background: #1a7f37; color: white; text-align: center; padding: 8px 16px; font-size: 13px; }
+
+header { display: flex; align-items: center; justify-content: space-between; background: #16181c; padding: 10px 20px; border-bottom: 1px solid #2f3336; position: sticky; top: 0; z-index: 100; gap: 20px; flex-wrap: wrap; }
+.logo-container { display: flex; align-items: center; gap: 10px; }
+.logo { height: 38px; border-radius: 6px; }
+.logo-text { font-size: 20px; font-weight: 700; color: #fff; }
+
+.sport-tabs { display: flex; gap: 6px; }
+.sport-tab { background: #2f3336; border: none; color: #e7e9ea; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 14px; font-weight: 500; }
+.sport-tab.active { background: #1d9bf0; color: white; }
+
+.user-info { display: flex; align-items: center; gap: 10px; }
+.badge-pro { background: #00ba7c; color: #0f1419; padding: 3px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; }
+.btn-login { background: #1d9bf0; color: white; border: none; padding: 7px 14px; border-radius: 20px; cursor: pointer; font-weight: 600; }
+
+.controls-bar { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: #16181c; border-bottom: 1px solid #2f3336; flex-wrap: wrap; gap: 12px; }
+.status-filters { display: flex; gap: 6px; flex-wrap: wrap; }
+.status-btn { background: #2f3336; border: none; color: #e7e9ea; padding: 8px 14px; border-radius: 20px; cursor: pointer; font-size: 13px; }
+.status-btn.active { background: #1d9bf0; color: white; }
+.status-btn span { font-weight: bold; margin-left: 4px; }
+
+.search-box input { background: #2f3336; border: none; color: white; padding: 9px 14px; border-radius: 20px; width: 260px; font-size: 14px; }
+.search-box input::placeholder { color: #71767b; }
+
+.market-tabs { display: flex; gap: 8px; padding: 10px 16px; background: #16181c; border-bottom: 1px solid #2f3336; overflow-x: auto; }
+.market-tab { background: transparent; border: none; color: #71767b; padding: 8px 12px; cursor: pointer; font-size: 13px; border-bottom: 2px solid transparent; }
+.market-tab.active { color: #1d9bf0; border-bottom-color: #1d9bf0; font-weight: 600; }
+
+.matches-container { max-width: 900px; margin: 0 auto; padding: 8px 12px 40px; }
+
+.league-group { margin-bottom: 16px; }
+.league-header { background: #1a1d21; padding: 10px 14px; border-radius: 8px 8px 0 0; font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 8px; border-left: 4px solid #1d9bf0; }
+.league-header img { height: 20px; border-radius: 2px; }
+
+.match-row { display: grid; grid-template-columns: 70px 1fr 140px; align-items: center; padding: 12px 14px; background: #16181c; border-bottom: 1px solid #2f3336; gap: 8px; }
+.match-row:hover { background: #1a1d21; }
+.match-row.live { background: #1a1520; border-left: 3px solid #f4212e; }
+
+.match-time { font-size: 13px; color: #71767b; text-align: center; }
+.match-time.live { color: #f4212e; font-weight: 600; }
+
+.match-teams { display: flex; flex-direction: column; gap: 4px; }
+.team-line { display: flex; align-items: center; justify-content: space-between; }
+.team-name { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.team-name img { width: 20px; height: 20px; object-fit: contain; }
+.score { font-weight: 700; font-size: 15px; min-width: 20px; text-align: right; }
+.score.live { color: #f4212e; }
+
+.match-odds { display: flex; gap: 4px; justify-content: flex-end; }
+.odd { background: #2f3336; padding: 6px 8px; border-radius: 6px; font-size: 12px; text-align: center; min-width: 42px; }
+.odd strong { display: block; font-size: 13px; color: #1d9bf0; }
+
+.value-badge { background: #00ba7c; color: #0f1419; font-size: 10px; padding: 2px 6px; border-radius: 8px; font-weight: bold; margin-left: 6px; }
+
+.powered-by { text-align: center; padding: 20px; font-size: 13px; color: #71767b; }
+.powered-by a { color: #1d9bf0; text-decoration: none; }
+
+.section { display: none; }
+.section.active { display: block; }
+
+.hero { text-align: center; padding: 30px 20px; }
+.hero h1 { font-size: 28px; margin-bottom: 8px; }
+
+footer { text-align: center; padding: 20px; color: #71767b; font-size: 13px; border-top: 1px solid #2f3336; }
+
+/* Calculadora e outras seções (mantidas) */
+.calculator { max-width: 700px; margin: 20px auto; padding: 0 20px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.calc-form, .calc-result { background: #16181c; padding: 20px; border-radius: 12px; border: 1px solid #2f3336; }
+.calc-form label { display: block; margin: 12px 0 4px; font-size: 14px; color: #71767b; }
+.calc-form input { width: 100%; padding: 10px; background: #0f1419; border: 1px solid #2f3336; color: white; border-radius: 6px; }
+.btn-calc { width: 100%; margin-top: 16px; background: #1d9bf0; color: white; border: none; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+
+@media (max-width: 700px) {
+    .match-row { grid-template-columns: 60px 1fr 100px; font-size: 13px; }
+    .search-box input { width: 100%; }
+    .controls-bar { flex-direction: column; align-items: stretch; }
+    .calculator { grid-template-columns: 1fr; }
+}

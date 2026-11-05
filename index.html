@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnalisaGol - Análises e Placar ao Vivo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.jpg">
+</head>
+<body>
+    <div class="disclaimer">
+        ⚠️ <strong>SITE DE ANÁLISE EDUCACIONAL</strong> — Não aceita apostas. Apenas análises e estatísticas. 18+ Jogue com responsabilidade.
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="AnalisaGol Logo" class="logo">
+            <span class="logo-text">AnalisaGol</span>
+        </div>
+        <div class="sport-tabs">
+            <button class="sport-tab active" data-sport="football">Futebol</button>
+            <button class="sport-tab" data-sport="basketball">Basquete</button>
+            <button class="sport-tab" data-sport="tennis">Tênis</button>
+        </div>
+        <div class="user-info">
+            <span class="badge-pro">PRO</span>
+            <button class="btn-login">Entrar</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- SEÇÃO PRINCIPAL - PLACAR + ANÁLISES -->
+        <div id="section-analises" class="section active">
+            <div class="controls-bar">
+                <div class="status-filters">
+                    <button class="status-btn active" data-status="all">Todos <span id="count-all">-</span></button>
+                    <button class="status-btn" data-status="live">Ao vivo <span id="count-live">-</span></button>
+                    <button class="status-btn" data-status="upcoming">Agendado <span id="count-upcoming">-</span></button>
+                    <button class="status-btn" data-status="finished">Concluído <span id="count-finished">-</span></button>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Pesquisar partidas, times, ligas...">
+                </div>
+            </div>
+
+            <div class="market-tabs">
+                <button class="market-tab active">Probabilidades</button>
+                <button class="market-tab">1X2</button>
+                <button class="market-tab">Over/Under</button>
+                <button class="market-tab">Cantos</button>
+            </div>
+
+            <section class="matches-container" id="matches-list">
+                <p style="text-align:center;padding:40px;color:#7d8590;">Carregando jogos do mundo...</p>
+            </section>
+
+            <div class="powered-by">
+                <a href="https://sportscore.com/" target="_blank" rel="dofollow">Powered by SportScore</a>
+            </div>
+        </div>
+
+        <!-- Outras seções mantidas -->
+        <div id="section-estatisticas" class="section">
+            <section class="hero"><h1>Estatísticas Detalhadas</h1></section>
+            <div class="stats-grid" id="stats-content"></div>
+        </div>
+
+        <div id="section-calculadora" class="section">
+            <section class="hero"><h1>Calculadora de Edge / Value</h1></section>
+            <div class="calculator">
+                <div class="calc-form">
+                    <label>Sua probabilidade estimada (%)</label>
+                    <input type="number" id="myProb" placeholder="Ex: 55" min="1" max="99" step="0.1">
+                    <label>Odd do mercado</label>
+                    <input type="number" id="marketOdd" placeholder="Ex: 2.00" min="1.01" step="0.01">
+                    <label>Valor da aposta (R$)</label>
+                    <input type="number" id="stake" placeholder="Ex: 100" min="1" step="1" value="100">
+                    <button id="calc-btn" class="btn-calc">Calcular Edge</button>
+                </div>
+                <div class="calc-result" id="calc-result"><p>Preencha os campos para ver o resultado.</p></div>
+            </div>
+        </div>
+
+        <div id="section-planos" class="section">
+            <section class="hero"><h1>Planos</h1></section>
+            <div class="plans">
+                <div class="plan">
+                    <h3>Grátis</h3>
+                    <p class="price">R$ 0</p>
+                    <ul><li>Análises básicas</li><li>Jogos ao vivo</li></ul>
+                    <button class="btn-plan">Atual</button>
+                </div>
+                <div class="plan featured">
+                    <h3>PRO</h3>
+                    <p class="price">R$ 49<span>/mês</span></p>
+                    <ul><li>Todas as ligas</li><li>Value Bets</li><li>Alertas</li></ul>
+                    <button class="btn-plan primary">Assinar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>AnalisaGol © 2026 — Análise estatística para fins educacionais. Não somos casa de apostas.</p>
+        <p>Jogue com responsabilidade. 18+.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
